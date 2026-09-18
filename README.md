@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+# Scout
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Discover Web3 projects before they become obvious.**
 
-Currently, two official plugins are available:
+Scout is an early-project discovery platform built for people looking for emerging Web3 projects, coins, and opportunities across multiple chains.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What Scout does
 
-## React Compiler
+- Discover newly emerging Web3 projects
+- Surface early market activity
+- Browse projects across chains
+- Filter by category and network
+- Search projects quickly
+- Open project websites and social channels
+- Save interesting projects for later
+- Track projects worth watching
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## V1
 
-## Expanding the ESLint configuration
+Scout focuses on fast project discovery with automatic data ingestion from external Web3 sources.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The goal is simple:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Find projects early. Research quickly. Reach out directly.**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+React • TypeScript • Vite • Node.js • Express
 
-```
+## Architecture
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Scout uses a source-based ingestion system that collects project data, normalizes it into a common format, and serves it through the Scout API.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+New sources can be added without rebuilding the core application.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Roadmap
 
-```
+**V1** — Early project discovery + multi-source ingestion
+
+**V2** — More sources, alerts, saved projects, and deeper project intelligence
+
+**V3** — Advanced discovery, personalization, and ecosystem intelligence
+
+## Repository
+
+https://github.com/WEB4GREAT/scout
+
+---
+
+Built by **WEB4GREAT**.
